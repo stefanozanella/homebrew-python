@@ -7,6 +7,7 @@ class Scapy < Formula
 
   depends_on :python
   depends_on 'libdnet'
+  depends_on 'pypcap'
 
   def install
     system "python", 'setup.py', 'install', "--prefix=#{prefix}"
