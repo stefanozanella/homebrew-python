@@ -8,6 +8,9 @@ class Scapy < Formula
   depends_on :python
   depends_on 'libdnet' => 'with-python'
   depends_on 'pypcap'
+  depends_on LanguageModuleDependency.new(:python, 'gnuplot-py', 'Gnuplot')
+  depends_on LanguageModuleDependency.new(:python, 'pyx==0.12.1', 'pyx')
+  depends_on 'pycrypto' => :python
 
   def install
     system "python", 'setup.py', 'install', "--prefix=#{prefix}"
